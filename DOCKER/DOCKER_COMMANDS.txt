@@ -1,0 +1,5 @@
+
+
+docker container run --publish 80:80 nginx
+
+docker container run --publish 80:80 nginx --name webhost
