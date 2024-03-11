@@ -2,4 +2,8 @@
 
 docker container run --publish 80:80 nginx
 
-docker container run --publish 80:80 nginx --name webhost
+docker container run --publish 80:80 nginx --detach --name webhost
+
+docker container logs webhost
+
+docker container top
