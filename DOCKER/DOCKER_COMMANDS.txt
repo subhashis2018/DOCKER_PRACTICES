@@ -2,8 +2,40 @@
 
 docker container run --publish 80:80 nginx
 
-docker container run --publish 80:80 nginx --detach --name webhost
+docker container run  --name webhost1 -p 8081:81 -d nginx 
+
+docker run --name mynginx1 -p 80:80 -d nginx
 
 docker container logs webhost
 
-docker container top
+docker run --name mongo -d mongo
+
+docker container top mongo : list running process in a specific container
+
+docker container inspect mongo : details of one container config
+
+docker container stats mongo : performance stats for all container
+
+
+docker container start -ai ubuntu
+
+docker container exec -it mysql bash
+
+docker network ls
+
+docker network inspect
+
+docker network create --driver
+
+docker network connect 
+
+docker network disconnect
+
+docker network inspect bridge
+
+
+
+
+
+
+
