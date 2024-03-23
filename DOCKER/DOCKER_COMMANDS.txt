@@ -2,6 +2,8 @@
 
 docker container run --publish 80:80 nginx
 
+docker container run  --name jenkins -d -p 8080:9191 jenkins 
+
 docker container run  --name webhost1 -p 8081:81 -d nginx 
 
 docker run --name mynginx1 -p 80:80 -d nginx
@@ -32,6 +34,18 @@ docker network connect
 docker network disconnect
 
 docker network inspect bridge
+
+docker inspect springboot_kafka_producer:1.0.0
+
+docker history springboot_kafka_producer:1.0.0
+
+docker tag springboot_kafka_producer subhashis2022/springboot_kafka_producer:1.0.0
+
+mkdir jenkins
+
+docker run -d --name jenkins -p 8080:8080 -v $PWD/jenkins/ jenkins/jenkins:jdk17 
+
+docker logs jenkins
 
 
 
